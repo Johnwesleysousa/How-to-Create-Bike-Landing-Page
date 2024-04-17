@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* root css  */
+:root{
+    --primary-color:#dc2626;
+    --text-dark:#171717;
+    --text-lignt:#78716c;
+    --extra-light:#f9f9f9;
+    --white:#fff;
+    --black:#000;
+    --max-width:1200px;
+}
+/* reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--extra-light);
+}
+/* seção 1 */
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding:5rem 1rem;
+    /* border: 1px solid red; */
+}
+.section_header{
+    margin: auto;
+    padding-bottom: 0.75rem;
+    width: fit-content;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    /* border: 1px solid blue; */
+}
+.section_header::before{
+    position: absolute;
+    content:'';
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 50px;
+    background-color: var(--primary-color);
+}
+img{
+    width: 100%;
+    display: flex;
+   
+}
+.nav{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.nav_logo img{
+    max-width: 100px;
+    margin-top: 60px;
+    margin-left: 30px;
+    /* border: 1px solid red; */
+}
+.nav_links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    /* border: 1px solid black; */
+    justify-content: flex-end;
+    margin: 0 8%;
+}
+.link a{
+    font-weight: 500;
+    color: var(--text-lignt);
+    transition: .3s;
+    
+}
+.link a:hover{
+    color: var(--primary-color);
+}
+.header_container{
+    padding-top: 0;
+}
+.section_header{
+    margin-bottom: 4rem;
+}
+.story_container p{
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+/* seção 3 */
+.evolution_grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+.evolution_nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.evolution_nav a{
+    padding: 0.75rem 0;
+    font-weight: 500;
+    color: var(--text-lignt);
+    border-top: 2px solid transparent;
+    transition: 0.3s;
+}
+.evolution_nav a:hover{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.evolution_nav a.active{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.evolution_content p{
+    padding-top: 4rem;
+    border-top: 2px solid var(--text-lignt);
+}
+/* seção 4 */
+.feature{
+    margin: 5rem 0;
+    position: relative;
+    isolation: isolate;
+}
+.feature::before, .feature::after{
+    position: absolute;
+    content: '';
+    background-color: var(--black);
+    inset: 0;
+    z-index: -1;
+}
+.feature::before{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0% 100%);
+    transform: skewY(8deg);
+}
+.feature::after{
+    -webkit-clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0% 100%);
+    transform: skewY(-8deg);
+}
+.feature_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+    align-items: center;
+}
+.feature_image img{
+    max-width: 550px;
+    margin: auto;
+}
+.feature_content{
+    margin: auto;
+}
+.feature_content .section_header{
+    width: 100%;
+    margin-bottom: 4rem;
+    color: var(--white);
+}
+.feature_content ul{
+    max-width: 400px;
+}
+.feature_content li{
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    color: var(--white);
+}
+.feature_content li::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 5px;
+    height: 12px;
+    width: 2px;
+    background-color: var(--primary-color);
+}
